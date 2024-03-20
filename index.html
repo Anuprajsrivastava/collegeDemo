@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Website</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="styles/styles.css" rel="stylesheet" />
+    <style>
+        .carousel-item {
+          position: relative;
+          height: 600px; /* Adjust the height as needed */
+          background-size: cover;
+          background-position: center;
+        }
+        .carousel-item::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5); /* Overlay color */
+        }
+        .carousel-text {
+            position: absolute;
+            top: 50%;
+            right: 15%; /* Adjust left position as needed */
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 3rem; /* Adjust font size as needed */
+            text-align: center;
+            animation: fadeInOut 4s ease infinite;
+        }
+        .myimage{
+            margin-top: 10px;
+            width: 100%;
+            height: 60px;
+            object-fit: cover;
+            animation: poping 2s ease infinite;
+            display: flex;
+            justify-content: center;
+        }
+        .myimage img{
+            width: 150px;
+            height: 60px;
+            object-fit: cover;
+        }
+        @keyframes poping {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            
+        }
+
+        @keyframes fadeInOut {
+          0%{
+            opacity: 0;
+            transform: scale(0.5);
+          }
+          50% {
+            opacity: 0.7;
+            transform: scale(1.0);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1.5);
+          }
+        }
+        .myhover:hover{
+            background-color: #dc1d1d;
+            
+        }
+      </style>
+    
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <!-- College Logo -->
+       
+            <img style="width:40px;height:45px;" src="./images/New-Logo-NWO-homepage-version.png" alt="College Logo" />
+           <span class="navbar-brand">My University</span>
+
+      
+      
+        <!-- Responsive Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <!-- Menu Items -->
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only text-white">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white myhover" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white  myhover" href="#">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white  myhover" href="#">Admissions</a>
+            </li>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white  myhover"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                More
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Student Life</a>
+                <a class="dropdown-item" href="#">Alumni</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Events</a>
+                <a class="dropdown-item" href="#">News</a>
+              </div>
+            </li>
+            <!-- End Dropdown Menu -->
+            <li class="nav-item">
+              <a class="nav-link text-white  myhover" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <!-- Text Animation Section -->
+      <div id="newsEvents" class="d-flex justify-content-center my-2">
+        <div class="bg-dark p-2 px-4 text-white">NEWS</div>
+        <marquee behavior="scroll" direction="left" scrollamount="10" class="my-2 d-flex items-center">
+          <span
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            inventore sint laudantium expedita dolore, est assumenda unde!
+            Consequatur ipsum, quo, at dolorum fuga error nam unde, dignissimos
+            similique adipisci blanditiis!</span
+          >
+          <span
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae,
+            repellendus!</span
+          >
+        </marquee>
+      </div>
+
+    <!-- Hero Section -->
+    <section class="mt-2">
+        <div lc-helper="background" class="container-fluid py-5 mb-4 d-flex justify-content-center" style="  background-image: url('./images/tulas2.jpg');
+        background-position: center;
+        background-size:cover;
+        background-repeat:no-repeat">
+            <div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12" style=" backdrop-filter: blur(10px) saturate(102%);
+        -webkit-backdrop-filter: blur(6px) saturate(102%);
+        background-color: rgba(255, 255, 255, 0.45);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);">
+                <div class="lc-block">
+                    <div editable="rich">
+                        <h2 class="fw-bolder display-3 animation">Students are Nation Builders  !!</h2>
+                    </div>
+                </div>
+                <div class="lc-block col-md-8 runningCard">
+                    <div editable="rich">
+                        <p class="lead">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
+                        </p>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <a class="btn btn-dark" href="#" role="button">Helpline No. 24/7</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide Section -->
+    <div id="mainCarousel" class="carousel slide" data-ride="carousel" data-interval="4000"> <!-- Set data-interval to enable autoplay (3000 milliseconds = 3 seconds) -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('./images/tulas1.jpg')">
+            <div class="carousel-text">Welcome to Our College</div>
+          </div>
+          <div class="carousel-item" style="background-image: url('./images/tulas2.jpg')">
+            <div class="carousel-text">Explore Our Campus</div>
+          </div>
+          <div class="carousel-item" style="background-image: url('./images/tulas5.jpg')">
+            <div class="carousel-text">Join Our Community</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Animation Section -->
+      <div id="newsEvents" class="d-flex justify-content-center my-2">
+        <div class="bg-dark p-2 px-4 text-white">Announcement</div>
+        <marquee behavior="scroll" direction="left" scrollamount="10" class="my-2 d-flex items-center">
+          <span style="color: red;"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            inventore sint laudantium expedita dolore, est assumenda unde!
+            Consequatur ipsum, quo, at dolorum fuga error nam unde, dignissimos
+            similique adipisci blanditiis!</span
+          >
+          <span style="color: red;"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae,
+            repellendus!</span
+          >
+        </marquee>
+      </div>
+
+
+     <!-- Event Section -->
+     <div class="scrollkarne">
+        <div class="containers scroll-1">
+            <div class="cards">
+                <div class="cards__image">
+                    <img src="./images/tulas1.jpg" alt="">
+                </div>
+                <div class="cards__content">
+                    <h3 class="cards__title">Hello</h3>
+                    <h3 class="cards__describe">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </h3>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards__image">
+                    <img src="./images/tulas2.jpg" alt="">
+                </div>
+                <div class="cards__content">
+                    <span class="cards__title">Hello</span>
+                    <p class="cards__describe">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards__image">
+                    <img src="./images/tulas1.jpg" alt="">
+                </div>
+                <div class="cards__content">
+                    <h3 class="cards__title">Hello</h3>
+                    <h3 class="cards__describe">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </h3>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards__image">
+                    <img src="./images/tulas2.jpg" alt="">
+                </div>
+                <div class="cards__content">
+                    <span class="cards__title">Hello</span>
+                    <p class="cards__describe">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards__image">
+                    <img src="./images/tulas1.jpg" alt="">
+                </div>
+                <div class="cards__content">
+                    <h3 class="cards__title">Hello</h3>
+                    <h3 class="cards__describe">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </h3>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards__image">
+                    <img src="./images/tulas2.jpg" alt="">
+                </div>
+                <div class="cards__content">
+                    <span class="cards__title">Hello</span>
+                    <p class="cards__describe">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+<!-- Upcoming Events -->
+<div class="myimage">
+    <img src="./images/event-2930674_1280.png"  alt="Upcoming Events">
+</div>
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="./images/audience-1853662_1280.jpg" alt="Image 1">
+            <div class="overlay">
+                <span class="zoom-out"></span>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="./images/evangeline-shaw-nwLTVwb7DbU-unsplash (1).jpg" alt="Image 1">
+            <div class="overlay">
+                <span class="zoom-out"></span>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="./images/noiseporn-JNuKyKXLh8U-unsplash.jpg" alt="Image 1">
+            <div class="overlay">
+                <span class="zoom-out"></span>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="./images/pablo-heimplatz-ZODcBkEohk8-unsplash.jpg" alt="Image 1">
+            <div class="overlay">
+                <span class="zoom-out"></span>
+            </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/samantha-gades-fIHozNWfcvs-unsplash (1).jpg" alt="Image 1">
+                <div class="overlay">
+                    <span class="zoom-out"></span>
+                </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="./images/xyhsdbanda.jpg" alt="Image 1">
+                    <div class="overlay">
+                        <span class="zoom-out"></span>
+                    </div>
+                    </div>
+            
+
+        <!-- Add more image-wrapper divs for other images -->
+        <!-- Repeat this for all six images -->
+    </div>
+    
+  
+
+    <!-- Footer -->
+    <footer class="bg-orange text-white text-center py-4">
+        <div class="container">
+          <p style="font-weight: 700;">
+            &copy; 2024 College Name. All Rights Reserved. |
+          </p>
+            <p>
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Programs</a>
+                <a href="#" class="footer-link">Admissions</a>
+                <a href="#" class="footer-link">More</a>
+                <a href="#" class="footer-link">Contact</a>
+            </p>
+            <p>
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Admissions</a>
+            <a href="#" class="footer-link">Academics</a>
+            <a href="#" class="footer-link">Research</a>
+            <a href="#" class="footer-link">Campus Life</a>
+            <a href="#" class="footer-link">Events</a>
+          </p>
+          <p>
+            <a href="#" class="footer-link">Alumni</a>
+            <a href="#" class="footer-link">News</a>
+            <a href="#" class="footer-link">Jobs</a>
+            <a href="#" class="footer-link">FAQ</a>
+            <a href="#" class="footer-link">Contact Us</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Service</a>
+          </p>
+        </div>
+      </footer>
+      
+      
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#carouselExampleIndicators").carousel({
+          interval: 4000, // Change slide every 3 seconds
+        });
+      });
+    </script>
+  </body>
+</html>
